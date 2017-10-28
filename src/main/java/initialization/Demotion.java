@@ -1,3 +1,4 @@
+package initialization;
 //: initialization/Demotion.java
 // Demotion of primitives and overloading.
 import static net.mindview.util.Print.*;
@@ -42,7 +43,7 @@ public class Demotion {
     double x = 0;
     print("double argument:");
     f1(x);f2((float)x);f3((long)x);f4((int)x);
-    f5((short)x);f6((byte)x);f7((char)x);
+    f5((short)x);f6((byte)x);f7((char)x);    
   }
   public static void main(String[] args) {
     Demotion p = new Demotion();

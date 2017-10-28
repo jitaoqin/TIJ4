@@ -9,13 +9,14 @@ class Letter {
 
 public class PassObject {
   static void f(Letter y) {
+	//System.out.println(y.c);
     y.c = 'z';
   }
   public static void main(String[] args) {
     Letter x = new Letter();
     x.c = 'a';
     print("1: x.c: " + x.c);
-    f(x);
+    f(x);//传递的是引用
     print("2: x.c: " + x.c);
   }
 } /* Output:

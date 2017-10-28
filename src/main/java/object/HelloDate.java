@@ -8,6 +8,10 @@ import java.util.*;
  * @author Bruce Eckel
  * @author www.MindView.net
  * @version 4.0
+ * 
+ * javac HelloDate.java 编译
+ * java	 HelloDate  param1  param2  运行
+ * javadoc HelloDate 生成文档
 */
 public class HelloDate {
   /** Entry point to class & application.

@@ -1,7 +1,12 @@
 package reusing;
 //: reusing/Car.java
 // Composition with public objects.
-
+/*
+ * 尽管可以创建protected域，但是最好的方式还是将域保持为private，应当一直保留“更改底层实现”的权利，
+ * 然后通过protected方法来控制类的继承者的访问权限。
+ * 
+ * 向上转型：有导出类转型成为基类，在继承图上实现向上移动的。向上转型是从一个较专用类型向通用类型转换。总是安全的。
+ */
 class Engine {
   public void start() {}
   public void rev() {}

@@ -1,8 +1,5 @@
-//: concurrency/CriticalSection.java
-// Synchronizing blocks instead of entire methods. Also
-// demonstrates protection of a non-thread-safe class
-// with a thread-safe one.
 package concurrency;
+//: concurrency/CriticalSection.java
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.*;
 import java.util.*;

@@ -19,44 +19,32 @@ import static net.mindview.util.Print.*;
  * 
  */
 class Bowl {
-	Bowl(int marker) 	{print("Bowl(" + marker + ")");}
+	Bowl(String marker) {print(marker);}
 	void f1(int marker) {print("f1(" + marker + ")");}
 }
 
 class Table {
-	static Bowl bowl1 = new Bowl(1);
+	static Bowl bowl1 = new Bowl("static Bowl1");
+	Bowl bowl3 = new Bowl("Bowl3");
 	Table() {
 		print("Table()");
-		bowl2.f1(1);
+		bowl3.f1(3);
 	}
 	void f2(int marker) {print("f2(" + marker + ")");}
-	static Bowl bowl2 = new Bowl(2);
+	Bowl bowl4 = new Bowl("Bowl4");
+	static Bowl bowl2 = new Bowl("static Bowl2");
 }
-
-class Cupboard {
-	Bowl bowl3 = new Bowl(3);
-	static Bowl bowl4 = new Bowl(4);
-	Cupboard() {
-		print("Cupboard()");
-		bowl4.f1(2);
-	}
-	void f3(int marker) {print("f3(" + marker + ")");}
-	static Bowl bowl5 = new Bowl(5);
-}
-
 public class StaticInitialization {
 	public static void main(String[] args) {
-		print("Creating new Cupboard() in main");
-		new Cupboard();
-		print("Creating new Cupboard() in main");
-		new Cupboard();
-		table.f2(1);
-		cupboard.f3(1);
+		//Table.bowl1.f1(1);		
+		print("Creating new Table in main");
+		new Table();
+		print("Creating new Table in main");
+		new Table();
 	}
 	static Table table = new Table();
-	static Cupboard cupboard = new Cupboard();
-} /*
-	 * Output: Bowl(1) Bowl(2) Table() f1(1) Bowl(4) Bowl(5) Bowl(3) Cupboard()
-	 * f1(2) Creating new Cupboard() in main Bowl(3) Cupboard() f1(2) Creating
-	 * new Cupboard() in main Bowl(3) Cupboard() f1(2) f2(1) f3(1)
-	 */// :~
+} 
+
+//法阻止自动初始化的进行，他将在构造器被调用之前发生，
+//在类的内部，变量定义的先后顺序决定了初始化的顺序。即使变量定义散步与方法定义之间，它们仍旧会在任何方法（包括构造器）被
+//调用之前得到初始化,w3被调用两次，第二次在构造器内，第一次被回收

@@ -13,7 +13,7 @@ public class ListFeatures {
     pets.add(h); // Automatically resizes
     print("2: " + pets);
     print("3: " + pets.contains(h));
-    pets.remove(h); // Remove by object
+    System.out.println(pets.remove(h)); // Remove by object
     Pet p = pets.get(2);
     print("4: " +  p + " " + pets.indexOf(p));
     Pet cymric = new Cymric();

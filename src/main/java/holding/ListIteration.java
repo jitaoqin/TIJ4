@@ -7,9 +7,10 @@ public class ListIteration {
   public static void main(String[] args) {
     List<Pet> pets = Pets.arrayList(8);
     ListIterator<Pet> it = pets.listIterator();
+    System.out.println(pets);
+    System.out.println(it.previousIndex());
     while(it.hasNext())
-      System.out.print(it.next() + ", " + it.nextIndex() +
-        ", " + it.previousIndex() + "; ");
+      System.out.print(it.next() + ", " + it.nextIndex() + ", " + it.previousIndex() + "; ");
     System.out.println();
     // Backwards:
     while(it.hasPrevious())

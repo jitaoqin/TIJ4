@@ -5,7 +5,6 @@ import static net.mindview.util.Print.*;
 
 interface Service {
 	void method1();
-
 	void method2();
 }
 
@@ -16,7 +15,6 @@ interface ServiceFactory {
 class Implementation1 implements Service {
 	Implementation1() {
 	} // Package access
-
 	public void method1() {
 		print("Implementation1 method1");
 	}

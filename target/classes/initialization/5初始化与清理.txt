@@ -8,8 +8,6 @@
 		注意：对象可能不被垃圾回收
 			垃圾回收并不等于“析构”
 			finalize()真正用途：垃圾回收至于内存有关
-<<<<<<< HEAD
-=======
 			
 			
 
@@ -520,4 +518,3 @@ public class MyClassLoader extends ClassLoader {
 
 
 
->>>>>>> a2695fb3f506f85eef23d67eeb4e0e10684c57b1

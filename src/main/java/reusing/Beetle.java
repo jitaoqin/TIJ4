@@ -26,15 +26,24 @@ class Insect {
  * 它通常是指加载发生于创建类的第一个对象的时候，但是当访问static域或static方法时，也会被加载。
  */
 public class Beetle extends Insect {
+<<<<<<< HEAD
+	private int k = printInit("Beetle.k initialized");
+=======
 	
 	private int k = printInit("Beetle.k initialized");
 	private static int x2 = printInit("static Beetle.x2 initialized");
+>>>>>>> a2695fb3f506f85eef23d67eeb4e0e10684c57b1
 
 	public Beetle() {
 		print("k = " + k);
 		print("j = " + j);
 	}
 
+<<<<<<< HEAD
+	private static int x2 = printInit("static Beetle.x2 initialized");
+
+=======
+>>>>>>> a2695fb3f506f85eef23d67eeb4e0e10684c57b1
 	public static void main(String[] args) {
 		print("Beetle constructor");
 		Beetle b = new Beetle();

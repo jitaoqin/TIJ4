@@ -1,3 +1,4 @@
+package gui;
 //: gui/flex/songScript.as
 function getSongs() {
   songService.getSongs();

@@ -1,3 +1,4 @@
+
 //: gui/jnlp/JnlpFileChooser.java
 // Opening files on a local machine with JNLP.
 // {Requires: javax.jnlp.FileOpenService;
@@ -7,9 +8,9 @@
 // cd ..
 // jar cvf gui/jnlp/jnlpfilechooser.jar gui/jnlp/*.class
 package gui.jnlp;
-import javax.jnlp.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.BufferCapabilities.FlipContents;
 import java.awt.event.*;
 import java.io.*;
 
@@ -20,7 +21,7 @@ public class JnlpFileChooser extends JFrame {
     save = new JButton("Save");
   private JEditorPane ep = new JEditorPane();
   private JScrollPane jsp = new JScrollPane();
-  private FileContents fileContents;
+  private FlipContents fileContents;
   public JnlpFileChooser() {
     JPanel p = new JPanel();
     open.addActionListener(new OpenL());

@@ -12,8 +12,7 @@ public class MapData<K,V> extends LinkedHashMap<K,V> {
     }
   }
   // Two separate Generators:
-  public MapData(Generator<K> genK, Generator<V> genV,
-      int quantity) {
+  public MapData(Generator<K> genK, Generator<V> genV,int quantity) {
     for(int i = 0; i < quantity; i++) {
       put(genK.next(), genV.next());
     }

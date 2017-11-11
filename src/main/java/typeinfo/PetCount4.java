@@ -4,6 +4,9 @@ import typeinfo.pets.*;
 import net.mindview.util.*;
 import static net.mindview.util.Print.*;
 
+import java.io.Serializable;
+import java.util.List;
+
 public class PetCount4 {
   public static void main(String[] args) {
     TypeCounter counter = new TypeCounter(Pet.class);
@@ -12,9 +15,12 @@ public class PetCount4 {
       counter.count(pet);
     }
     print();
-    print(counter);
+    print(counter);  
+    
   }
-} /* Output: (Sample)
+ }
+
+/* Output: (Sample)
 Rat Manx Cymric Mutt Pug Cymric Pug Manx Cymric Rat EgyptianMau Hamster EgyptianMau Mutt Mutt Cymric Mouse Pug Mouse Cymric
 {Mouse=2, Dog=6, Manx=7, EgyptianMau=2, Rodent=5, Pug=3, Mutt=3, Cymric=5, Cat=9, Hamster=1, Pet=20, Rat=2}
 *///:~

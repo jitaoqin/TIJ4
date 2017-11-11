@@ -1,16 +1,24 @@
+总结
+	1）数组容量不能改变
+	2）数组和list都是排好序的容器，能自动扩容
+	3）如果要进行大量的随机访问，就是用ArrayList，如果经常插入或删除元素，则应该使用LinkedList
+	4）各种Queue以及栈的行为，由LinkedList提供支持
+	5）HashMap用于快速访问，TreeMap保持键始终处于排序状态，没有HashMap快，LinkedHashMap保持元素插入的顺序，通过散列提供了快速访问能力
+	6）Set不接受重复元素，HashSet提供最快的访问速度，TreeSet保持元素始终处于排序状态，LinkedHashSet以插入顺序保存元素
+	7）新程序不应该出现过时的Vector，HashTable和Stack。
+	
+	
+	
 	ArrayList<Apple>不仅仅是Arraylist，其中尖括号括起来的是类型参数（可以有多个），它指定了这个容器实例可以保存的类型。
 通过使用泛型，就可以在编译器防止将错误类型的对象置于到容器中。通过使用泛型，不仅知道编译器将会检查你放置到容器中的对象类型，而在
 使用容器中的对象时，可以使用更加清晰的语法。并允许向上转型。	
 	Java容器库类库的用途是保存对象
-	1）Collection。一个独立元素的序列，这些元素都服从一条或多条规则。List必须按照插入的顺序保存数据，而set不能有重复元素。
-	Queue按照排队规则来确定对象产生的顺序（通常与被插入的顺序相同）
+	1）Collection。一个独立元素的序列，这些元素都服从一条或多条规则。List必须按照插入的顺序保存数据，而set不能有重复元素。Queue按照排队规则来确定对象产生的顺序（通常与被插入的顺序相同）
 	2）Map。一组成对的键值对对象。
 List 
 	两种类型的List
 	ArrayList：它长于随机访问数据，但是在List中间插入和移除元素时较慢
-	LinkedList：它通过代价较低的在List中间的插入和删除操作，提供了优化的顺序访问。LinkedList在随机访问方面相对较慢，但是它的特性集较ArrayList更大。
-还添加了可以使其用作栈，队列或双端队列的方法。
-
+	LinkedList：它通过代价较低的在List中间的插入和删除操作，提供了优化的顺序访问。LinkedList在随机访问方面相对较慢，但是它的特性集较ArrayList更大。还添加了可以使其用作栈，队列或双端队列的方法。
 Stack 
 	栈通常指后进先出（LIFO）的容器。因为最后压入栈的元素，第一个弹出栈。
 Set
@@ -20,6 +28,11 @@ Set
 	LinkedHashList因为查询速度的原因也使用了散列，但是看起来它使用了链表来维护元素的插入顺序。
 	如果你想对结果排序，一种方式是使用TreeSet来代替HashSet
 	使用contains测试Set的归属性。set1.contains("H")
+Queue
+	典型的先进先出的容器。即从容器的一端放入，从另一端取出，并且事物放入容器的顺序和取出顺序是相同的。队列常被当作一种可靠的对象从程序的
+	某个区域传输到另一个区域的途径。
+	LinkedList提供了方法以支持队列的行为，并且实现了Queue接口，因此LinkedList可以用作Queue的一种实现。通过LinkedList向上转型为Queue。
+	peek（队列为空返回null）,element（NoSuchElementExepction)在不移除的情况下返回对头，poll(null)和remove(NoSuchElementExection)移除并返回对头，offer添加 失败返回false
 	
 迭代器
 	迭代器也是一种设计模式，迭代器是一个轻量级对象：创建他的代价小，它的工作是遍历并选择序列中的对象，而客户端程序员不必知道或关心该序列底层的结构。
@@ -32,4 +45,5 @@ Set
 	它还可以产生相对于迭代器在列表中指向的当前位置的前一个 和后一个元素的索引，并且可以使用set（）方法替换它访问过的最后一个元素。你可以通过
 	调用listIterator()方法产生一个指向List开始处的ListIterator，并且还可以通过调用listIterator(n)方法创建一个一开始就指向列表
 	索引为n的元素的ListIterator。
+	
 	

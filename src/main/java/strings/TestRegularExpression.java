@@ -7,6 +7,7 @@ import static net.mindview.util.Print.*;
 
 public class TestRegularExpression {
   public static void main(String[] args) {
+	
     if(args.length < 2) {
       print("Usage:\njava TestRegularExpression " +
         "characterSequence regularExpression+");

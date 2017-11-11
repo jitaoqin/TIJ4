@@ -1,7 +1,9 @@
 //: typeinfo/pets/Dog.java
 package typeinfo.pets;
 
-public class Dog extends Pet {
+import java.io.Serializable;
+
+public class Dog extends Pet implements Serializable {
   public Dog(String name) { super(name); }
   public Dog() { super(); }
 } ///:~

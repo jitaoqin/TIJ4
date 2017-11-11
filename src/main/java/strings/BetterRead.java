@@ -1,25 +1,26 @@
 package strings;
+import java.io.BufferedReader;
+import java.io.StringReader;
 //: strings/BetterRead.java
 import java.util.*;
 
 public class BetterRead {
   public static void main(String[] args) {
-    Scanner stdin = new Scanner(SimpleRead.input);
-    System.out.println("What is your name?");
-    String name = stdin.nextLine();
-    System.out.println(name);
-    System.out.println(
-      "How old are you? What is your favorite double?");
-    System.out.println("(input: <age> <double>)");
-    int age = stdin.nextInt();
-    double favorite = stdin.nextDouble();
-    System.out.println(age);
-    System.out.println(favorite);
+	BufferedReader input = new BufferedReader(new StringReader("Sir Robin of Camelot\n22 1.61803"));
+    Scanner scanner = new Scanner(input);
+    String name = scanner.nextLine();
+    int age = scanner.nextInt();
+    double favorite = scanner.nextDouble();
     System.out.format("Hi %s.\n", name);
-    System.out.format("In 5 years you will be %d.\n",
-      age + 5);
-    System.out.format("My favorite double is %f.",
-      favorite / 2);
+    System.out.format("In 5 years you will be %d.\n",age + 5);
+    System.out.format("My favorite double is %f.",favorite / 2);
+    System.out.println();
+    scanner = new Scanner("12, 42, 78, 99, 42");
+    scanner.useDelimiter("\\s*,\\s*");
+    while(scanner.hasNextInt())
+      System.out.println(scanner.nextInt());
+  
+    
   }
 } /* Output:
 What is your name?

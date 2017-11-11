@@ -3,7 +3,11 @@ package arrays;
 // Using Arrays.equals()
 import java.util.*;
 import static net.mindview.util.Print.*;
-
+class BerylliumSphere {
+	  private static long counter;
+	  private final long id = counter++;
+	  public String toString() { return "Sphere " + id; }
+	}
 public class ComparingArrays {
   public static void main(String[] args) {
     int[] a1 = new int[10];
@@ -18,6 +22,14 @@ public class ComparingArrays {
     String[] s2 = { new String("Hi"), new String("Hi"),
       new String("Hi"), new String("Hi") };
     print(Arrays.equals(s1, s2));
+    
+    //填充
+    String[] a9 = new String[7];
+    Arrays.fill(a9, "Hello");
+	print("a9 = " + Arrays.toString(a9));
+	// Manipulating ranges:
+	Arrays.fill(a9, 3, 5, "World");
+	print("a9 = " + Arrays.toString(a9));
   }
 } /* Output:
 true

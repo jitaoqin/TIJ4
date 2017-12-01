@@ -3,7 +3,14 @@ package arrays;
 //: arrays/ArrayOfGenerics.java
 // It is possible to create arrays of generics.
 import java.util.*;
+class BerylliumSphere {
+	private static long counter;
+	private final long id = counter++;
 
+	public String toString() {
+		return "Sphere " + id;
+	}
+}
 public class ArrayOfGenerics {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {

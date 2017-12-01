@@ -9,8 +9,7 @@ public class TestGenerated {
     System.out.println(Arrays.toString(a));
     a = Generated.array(a,new CountingGenerator.Integer());
     System.out.println(Arrays.toString(a));
-    Integer[] b = Generated.array(Integer.class,
-        new CountingGenerator.Integer(), 15);
+    Integer[] b = Generated.array(Integer.class, new CountingGenerator.Integer(), 15);
     System.out.println(Arrays.toString(b));
   }
 } /* Output:
